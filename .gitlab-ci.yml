@@ -1,0 +1,13 @@
+stages:
+  - build
+  - deploy
+
+build:
+  stage: build
+  script:
+    - docker build -t inventory-app .
+
+deploy:
+  stage: deploy
+  script:
+    - docker run -d -p 5000:5000 inventory-app
