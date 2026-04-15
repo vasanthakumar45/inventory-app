@@ -10,4 +10,4 @@ build:
 deploy:
   stage: deploy
   script:
-    - docker run -d -p 5000:5000 inventory-app
+    - docker run -d -p 5000:5000 --name inventory-new app inventory-app
